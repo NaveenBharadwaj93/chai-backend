@@ -1,9 +1,14 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants";
-import 'dotenv/config'
+// require('dotenv').config({path: './env'})
 
+// import mongoose from "mongoose";
+// import { DB_NAME } from "C:\Users\navee\Desktop\Learning\Node\chai-backend\src\constants.js";
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
 
-
+dotenv.config({
+    path: './env'
+})
+connectDB()
 
 /*
 import express from "express";
