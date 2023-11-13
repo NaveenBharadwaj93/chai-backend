@@ -5,20 +5,20 @@ class apiError extends Error {
         errors = [],
         stack = '')
         {
-        super(this.message)
-        this.statuscode = statuscode
-        this.data = null
-        this.message = message
-        this.success = false
-        this.errors = errors
+            super(this.message)
+            this.statuscode = statuscode
+            this.data = null
+            this.message = message
+            this.success = false
+            this.errors = errors
 
-        if(stack){
-            this.stack = stack
-        } else{
-            Error.captureStackTrace(this,this.constructor);
+            if(stack){
+                this.stack = stack
+            } else{
+                Error.captureStackTrace(this,this.constructor);
+            }
+
         }
-
-    }
 }
 
 export {apiError}
